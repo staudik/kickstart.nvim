@@ -89,7 +89,11 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
+vim.api.nvim_create_autocmd("VimEnter",{
+  callback = function ()
+    vim.cmd("NvimTreeToggle")
+  end,
+})
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -97,7 +101,7 @@ vim.g.have_nerd_font = true
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
-  
+
   
 -- Make line numbers default
   vim.opt.number = true
@@ -153,7 +157,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 21
+vim.opt.scrolloff = 100
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
