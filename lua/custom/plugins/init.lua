@@ -37,7 +37,7 @@ return {
         number = false,
         relativenumber = false,
         signcolumn = "yes",
-        width = 30,
+        width = 20,
         float = {
           enable = false,
           quit_on_focus_loss = true,
